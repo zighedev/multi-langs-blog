@@ -1,0 +1,80 @@
+.direction{
+	direction: rtl;
+}
+
+.error .code{
+	border-right: unset;
+	border-left: 1px solid #cbd5e0;
+}
+
+nav .admin-nav-icons ul{
+	text-align: right;
+}
+
+nav form input{
+	margin-left: 0.5rem;
+}
+
+#adminMenu .menu .menu-item{
+	direction: rtl;
+}
+#adminMenu .menu .sub-menu{
+	margin-left: unset;
+	margin-right: 2rem;
+}
+
+.svg-rotate svg{
+	rotate: 180deg;
+}
+
+main .page_path,
+main .tags,
+main .comments,
+main .related{
+	border-left: none;
+	border-right: 1px solid var(--main-color);
+}
+main .tags .title::before,
+main .comments .title::before,
+main .related .title::before{
+    margin-right: -11px;
+	border-color: transparent var(--main-color) transparent transparent;
+}
+
+main .page_path a,
+main .page_path span{
+	position: relative;
+	margin-right: unset;
+	margin-left: 2.5rem;
+}
+main .page_path a::before{
+    right: unset;
+    left: -1rem;
+    margin-left: unset;
+    rotate: 135deg;
+}
+main .page_path a::after{
+    margin-left: unset;
+    margin-right: 0.5rem;
+    rotate: 45deg;
+}
+
+main .section-content{
+	margin-left: unset;
+    margin-right: 5px;
+}
+
+main .page_pagination{
+    margin-right: 50%;
+	transform: translateX(50%);
+}
+
+/*
+* dashboard
+*/
+#dashboard .box .details{
+	margin-left: 0;
+	margin-right: 2rem;
+    border-left: unset;
+    border-right: 1px solid;
+}   
