@@ -64,6 +64,12 @@ main .section-content{
     margin-right: 5px;
 }
 
+main .comments .comment .comment-body::after{
+    left: unset;
+    right: 7px;
+    border-color: transparent #e9e9e9 transparent transparent ;
+}
+
 main .page_pagination{
     margin-right: 50%;
 	transform: translateX(50%);
