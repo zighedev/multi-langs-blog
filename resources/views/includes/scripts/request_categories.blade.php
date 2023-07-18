@@ -55,7 +55,7 @@
                     window.sessionStorage.setItem(locale+'_categories', JSON.stringify(data));
 					setCategories(data);
 				},
-				error: function(){
+				error: function(e){
 					window.location.replace('{{route("home")}}');
 				}
             });
