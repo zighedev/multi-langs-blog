@@ -59,6 +59,11 @@ main .related{
     background-color: white;
 	padding-bottom: 1rem;
 }
+main .comments .section-content{
+	max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 main .page_path,
 main .tags .title,
 main .comments .title,

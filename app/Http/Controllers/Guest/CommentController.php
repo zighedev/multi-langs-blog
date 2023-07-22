@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Http\Requests\CommentRequest;
 
 class CommentController extends Controller
@@ -21,7 +22,16 @@ class CommentController extends Controller
 	
     
     public function store(CommentRequest $request){ 
-        return 'success';
+		$comment = Comment::create($request->all());
+		$data = [];
+		
+        if($comment){
+			$data['success'] = true;
+		}else{
+			$data['success'] = false;
+		}
+		
+		return $data;
     }
 
     

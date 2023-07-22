@@ -54,7 +54,7 @@
 	<div class="title">{{ __('words.comments') }}</div>
 	<div class="section-content">
 		
-		<div class="comment">
+		<div class="comment comment-form">
 			<div class="row px-3">
 				<div class="col-md-10 col-lg-8 mb-2">
 					<input id="name" type="text" class="form-control required" name="name" placeholder="{{__('words.name')}} (*)">
@@ -87,6 +87,7 @@
 	</div>
 </section>
 @endsection
+
 
 {{--
 
@@ -139,13 +140,16 @@
 				'_token': "{{csrf_token()}}",
 				'name': $("input[name='name']").val(),
 				'email': $("input[name='email']").val(),
-				'comment': $("textarea").val()
+				'comment': $("textarea").val(),
+				'article_id': "{{$article->id}}"
 			},
             success: function(data){
                 $('input').val('');
                 $('textarea').val('');
                 $('#comment-submit').html("{{ __('words.post a comment') }}").attr('disabled', true);
-				alert(data);/// store and add comment to page
+				if(data.success){
+					$('.comment-form').remove();					
+				}
             },
             error: function(reject){
 				$('#comment-submit').html("{{ __('words.post a comment') }}").attr('disabled', false);

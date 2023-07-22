@@ -54,7 +54,7 @@
 		<td>{{ $article->created_at }}</td>
 		
 		<td>
-			<a class="btn btn-success" href="{{ route('article', $article->id) }}"><i class="fas fa-external-link-alt"></i></a>
+			<a class="btn btn-success" href="{{ route('article', $article->id) }}" target="_blank"><i class="fas fa-external-link-alt"></i></a>
 			@can('update', $article)
 			<a class="btn btn-primary" href="{{ route('admin.articles.edit', $article->id) }}"><i class="fas fa-pen"></i></a>
 			@endcan

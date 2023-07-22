@@ -22,7 +22,6 @@ class ArticleController extends Controller
 	
     
     public function show($article_id){
-		
 		$article = Article::select('id', 'image', 'user_id', 'category_id', 'created_at')
 							->approved()
 							->with(['user' => function($q){
